@@ -1,0 +1,41 @@
+body{
+    background-color: #fff;
+    margin: 0;
+}
+.float-left {
+    float: left;
+}
+
+.margin-10px {
+    margin: 10px;
+}
+
+.ul-style {
+    list-style-type: none;
+    margin: 0;
+    right: 0;
+    top:0;
+    position: fixed;
+}
+
+.link-style {
+    background-color: greenyellow;
+    padding: 10px;
+    border-radius: 5px;
+}
+li a{
+    text-decoration: none;
+}
+ul li:hover{
+    background-color:green;
+}
+ul li:hover a{
+    color: #fff;
+}
+
+section{
+    height: 100vh;
+}
+.span-color{
+    color:red;
+}
