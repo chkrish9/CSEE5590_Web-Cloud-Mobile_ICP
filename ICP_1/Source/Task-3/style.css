@@ -1,0 +1,19 @@
+.content{
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+}
+table{
+    width: 100%;
+}
+td{
+    padding: 60px;
+}
+.border-bottom-right{
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+}
+.border-top-left{
+    border-top:1px solid;
+    border-left:1px solid;
+}
