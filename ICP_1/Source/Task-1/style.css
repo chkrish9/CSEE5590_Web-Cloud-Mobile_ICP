@@ -1,5 +1,6 @@
 body{
     background-color: #fff;
+    padding: 10px;
     margin: 0;
 }
 .float-left {
@@ -32,10 +33,13 @@ ul li:hover{
 ul li:hover a{
     color: #fff;
 }
-
-section{
-    height: 100vh;
-}
 .span-color{
     color:red;
+}
+.installed-soft-img{
+    width: 500px;
+    height: 300px;
+}
+td{
+    border: 1px solid;
 }
