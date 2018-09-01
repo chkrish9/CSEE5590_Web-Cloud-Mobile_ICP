@@ -1,0 +1,31 @@
+.user-img{
+    width: 110px;
+    height: 100px;
+}
+body{
+    font-family: 'Lato', sans-serif;
+}
+.mtb-0{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.mb-0{
+    margin-bottom: 0;
+}
+.mt-10px{
+    margin-top: 10px;
+}
+.font-color-BCBBBB{
+    color: #BCBBBB;
+}
+.font-color-747704{
+    color: #747704;
+}
+.img-style{
+    width: 100%;
+    height: 300px;
+}
+.work-img-style{
+    height: 200px!important;
+    width: 100%;
+}

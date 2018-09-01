@@ -1,0 +1,15 @@
+.game-title-icon{
+    width: 8em;
+    height: 8em;
+}
+.mtb-2em{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.label-style{
+    font-size: 5em;
+}
+.container-style{
+    background: #d3d1d1;
+    margin-top: 50px;
+}
