@@ -1,4 +1,4 @@
-#ICP - 2 :
+# ICP - 2 :
 
 **Task 01 :** Design Rock Scissors Paper Game using Javascript.
 
