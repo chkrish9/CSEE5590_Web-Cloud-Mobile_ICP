@@ -19,3 +19,11 @@
 **Task 02 :** Responsive Web Design Task.
 
 **Source URL :** https://github.com/chkrish9/CSEE5590_Web-Cloud-Mobile_ICP/tree/master/ICP_2
+
+## ICP - 3 :
+
+**Task 01 :** Design favorite color picker page using Javascript and JQuery.
+
+**Task 02 :** Geting details of Github user using Github API.
+
+**Source URL :** https://github.com/chkrish9/CSEE5590_Web-Cloud-Mobile_ICP/tree/master/ICP_3
