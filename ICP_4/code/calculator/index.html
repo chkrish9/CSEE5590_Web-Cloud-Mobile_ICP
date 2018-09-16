@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<!--Initializing angular-->
+<body ng-app="CalculatorApp">
+<!--Initializing controller-->
+<div class="calculator" ng-controller="CalculatorController">
+    <!--Display the calculator-->
+    <div class="col-sm-4 col-sm-offset-4 col-xs-12 cal-background">
+        <!--Calculator header-->
+        <div class="col-xs-12 text-center">
+            <h1 class="margin-top-0">Calculator</h1>
+        </div>
+        <!--Calculator input-->
+        <div class="col-xs-12">
+            <div class="form-group">
+                <input type="text" class="form-control" id="input" ng-model="inputNumber" name="inputNumber">
+            </div>
+        </div>
+        <!--Buttons for operations and numbers-->
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="doOperation('%')"><i class="fas fa-percent"></i></button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="doOperation('x2')">x<sup>2</sup></button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="clear()">C</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="backspace()"><i class="fas fa-backspace"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="setNumber(7)">7</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="setNumber(8)">8</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="setNumber(9)">9</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="doOperation('/')"><i class="fas fa-divide"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="setNumber(4)">4</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="setNumber(5)">5</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="setNumber(6)">6</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="doOperation('*')"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="setNumber(1)">1</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="setNumber(2)">2</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="setNumber(3)">3</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="doOperation('-')"><i class="fas fa-minus"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="setNumber('.')">.</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="setNumber(0)">0</button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="doOperation('+')"><i class="fas fa-plus"></i></button>
+                </div>
+                <div class="col-xs-3">
+                    <button class="btn btn-default form-control" ng-click="equalTo('=')"><i class="fas fa-equals"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="calculator.js"></script>
+</body>
+</html>

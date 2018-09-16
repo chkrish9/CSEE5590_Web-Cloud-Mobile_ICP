@@ -1,0 +1,28 @@
+body{
+    background: url("background.png");
+}
+button{
+    font-weight: bold!important;
+    height: 35px!important;
+    margin: 5px 0;
+}
+.calculator{
+    position: absolute;
+    top: 20%;
+    padding: 10px;
+}
+.margin-top-0{
+    margin-top: 0;
+}
+.cal-background{
+    background-color: #00b8ff;
+    padding: 10px;
+}
+input {
+    text-align:right;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

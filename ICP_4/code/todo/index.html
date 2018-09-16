@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo in Angular.js</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<!--Initializing angular-->
+<body ng-app="angularTodo">
+<!--Initializing controller-->
+<div ng-controller="angularTodoC">
+    <!--This Header to display morning message and name-->
+    <div class="text-center">
+        <h1>{{Message}}</h1>
+        <h3>Hi Murali, Good {{daymsg}}</h3>
+    </div>
+    <!--This is input box to enter the todo-->
+    <div class="col-sm-4 col-sm-offset-4">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Enter the todo" ng-model="todoItem">
+            <span class="input-group-addon hidden-sm hidden-xs" ng-click="submitNewItem()"><i class="fas fa-plus"></i> Add</span>
+            <span class="input-group-addon hidden-md hidden-lg" ng-click="submitNewItem()"><i
+                    class="fas fa-plus"></i></span>
+        </div>
+    </div>
+
+    <!--This div is to display the todo item-->
+    <div class="col-sm-offset-2 col-sm-8">
+        <!--ng- repeat is an angular directive, which is used to loop an array-->
+        <div ng-repeat="item in items">
+            <!--This div is visible in mobile and tablet-->
+            <div class="hidden-md hidden-lg item">
+                <div class="col-xs-12 item-style">
+                    <label ng-class="{complete: item.status}">{{item.todo}}</label>
+                    <button class="btn btn-danger pull-right" ng-click="deleteItem($index)"><i class="fas fa-trash"></i>
+                    </button>
+                    <button class="btn btn-default pull-right" ng-show="!item.status" ng-click="completeItem($index)"><i
+                            class="fas fa-check"></i></button>
+                    <button class="btn btn-success pull-right" ng-show="item.status" ng-click="pendingItem($index)"><i
+                            class="fas fa-check"></i></button>
+                </div>
+            </div>
+            <!--This div is visible in desktop and Tvs-->
+            <div class="hidden-sm hidden-xs item">
+                <div class="col-sm-12 item-style">
+                    <label ng-class="{complete: item.status}">{{item.todo}}</label>
+                    <button class="btn btn-danger pull-right" ng-click="deleteItem($index)"><i class="fas fa-trash"></i>
+                        Delete
+                    </button>
+                    <button class="btn btn-default pull-right" ng-show="!item.status" ng-click="completeItem($index)"><i
+                            class="fas fa-check"></i> Pending
+                    </button>
+                    <button class="btn btn-success pull-right" ng-show="item.status" ng-click="pendingItem($index)"><i
+                            class="fas fa-check"></i> Complete
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+<script src="todo.js"></script>
+</body>
+</html>
