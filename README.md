@@ -27,3 +27,11 @@
 **Task 02 :** Geting details of Github user using Github API.
 
 **Source URL :** https://github.com/chkrish9/CSEE5590_Web-Cloud-Mobile_ICP/tree/master/ICP_3
+
+## ICP - 4 :
+
+**Task 01 :** Design calculator app using angularjs.
+
+**Task 02 :** Design Todo app using angularjs.
+
+**Source URL :** https://github.com/chkrish9/CSEE5590_Web-Cloud-Mobile_ICP/tree/master/ICP_4
