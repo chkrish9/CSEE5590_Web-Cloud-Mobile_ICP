@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Translate</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body ng-app="translateApp">
+<div class="container  margin-top-5em" ng-controller="translateCtrl">
+    <h1 class="text-center">Welcome to UMKC Translator</h1>
+    <div class="col-sm-6 margin-top-5em">
+        <img src="background.png" width="100%" height="100%">
+    </div>
+    <div class="col-sm-6 margin-top-5em">
+    <form>
+        <div class="form-group">
+            <select class="form-control" ng-model="ddlSource">
+                <option value="">--Source language--</option>
+                <option ng-repeat="option in options | orderBy:'f'" value="{{option.a}}">{{option.f}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" rows="5" placeholder="Enter the text to translate" ng-model="txtSource"></textarea>
+        </div>
+        <div class="form-group">
+            <select class="form-control" ng-model="ddlTarget">
+                <option value="">--Target language--</option>
+                <option ng-repeat="option in options | orderBy:'f'" value="{{option.a}}">{{option.f}}</option>
+            </select>
+        </div>
+        <div class="col-sm-4 col-sm-offset-4">
+            <button class="btn btn-primary form-control" ng-click="translate()">Translate</button>
+        </div>
+        <div class="form-group margin-top-5em label-style">
+            <label>{{translatedText}}</label>
+        </div>
+    </form>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

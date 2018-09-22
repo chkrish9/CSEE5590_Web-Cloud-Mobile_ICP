@@ -1,0 +1,13 @@
+.margin-top-10em{
+    margin-top: 10em;
+}
+.margin-top-5em{
+    margin-top: 5em;
+}
+
+.label-style{
+    border: 1px solid #ddd;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+}
