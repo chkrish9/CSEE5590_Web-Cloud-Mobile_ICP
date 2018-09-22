@@ -1,5 +1,6 @@
 var app = angular.module('translateApp', []);
 app.controller('translateCtrl', function ($scope, $http) {
+    //Declaring the variables.
     $scope.translatedText = "";
     $scope.options = [
         {"f": "Azerbaijan", "a": "az"},
@@ -97,6 +98,10 @@ app.controller('translateCtrl', function ($scope, $http) {
         {"f": "Malay", "a": "ms"}
     ];
 
+    /*
+   * This method will call when the user clicks on Translate button.
+   * In this method we will make a call to Yandex API to get the translated text.
+   */
     $scope.translate = function () {
         $http({
             method: 'GET',
