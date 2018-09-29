@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>UMKC Book Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="js/book.js"></script>
+</head>
+
+<body ng-app="bookApp" ng-controller="bookCtrl">
+  <div class="text-center ">
+    <h2 class="header-style">UMKC Book store</h2>
+  </div>
+  <div class="container">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-sm-12">
+            <span class="panel-title pull-left font-2em">Books</span>
+            <div class="pull-right">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Add record
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ISBN</th>
+              <th>BookName</th>
+              <th>Copies</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="book in books">
+              <td ng-if="!isEdit">{{book.isbn}}</td>
+              <td ng-if="!isEdit">{{book.bookName}}</td>
+              <td ng-if="!isEdit">{{book.copies}}</td>
+              <td ng-if="isEdit"><input type="text" ng-model="book.isbn" value="{{book.isbn}}"></td>
+              <td ng-if="isEdit"><input type="text" ng-model="book.bookName" value="{{book.bookName}}"></td>
+              <td ng-if="isEdit"><input type="text" ng-model="book.copies" value="{{book.copies}}"></td>
+              <td>
+                <button type="button" ng-click=edit() class="btn btn-primary" ng-if="!isEdit">Edit</button>
+                <button type="button" ng-click=editsave(book._id) class="btn btn-primary" ng-if="isEdit">Save</button>
+              </td>
+              <td>
+                <button type="button" ng-click=delete(book._id) class="btn btn-primary" ng-if="!isEdit">Delete</button>
+                <button type="button" ng-click=cancel() class="btn btn-primary" ng-if="isEdit">Cancel</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Add Book</h4>
+        </div>
+        <div class="modal-body">
+          <input type="text" ng-model="data.isbn" class="form-control margin-top-10px" placeholder="ISBN Number">
+          <input type="text" ng-model="data.bookName" class="form-control margin-top-10px" placeholder="Book Name">
+          <input type="text" ng-model="data.copies" class="form-control margin-top-10px" placeholder="Copies">
+          <input type="text" ng-model="data.edition" class="form-control margin-top-10px" placeholder="Edition">
+          <input type="text" ng-model="data.bookAuthor" class="form-control margin-top-10px" placeholder="BookAuthor">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click=add()>Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

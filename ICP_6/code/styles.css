@@ -1,0 +1,20 @@
+.margin-top-10px{
+    margin-top:10px; 
+}
+body{
+    background: url("background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.font-2em{
+    font-size: 2em!important;
+}
+.header-style{
+    display: inline-block;
+    background-color: #060694;
+    color: #fff;
+    padding: 10px;
+}
