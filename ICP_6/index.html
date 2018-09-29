@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="js/book.js"></script>
+</head>
+<body ng-app="bookApp" ng-controller="bookCtrl">
+  
+<div class="container">
+        <input type="text" ng-model="data.isbn" placeholder="isbn">
+        <input type="text" ng-model="data.bookName" placeholder="bookName">
+        <input type="text" ng-model="data.copies" placeholder="copies">
+        <input type="text" ng-model="data.edition" placeholder="edition">
+        <input type="text" ng-model="data.bookAuthor" placeholder="bookAuthor">
+        <button type="button" ng-click=add() class="btn btn-primary">Add</button>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>ISBN</th>
+            <th>BookName</th>
+            <th>Copies</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="book in books">
+            <td><input type="text" ng-model="book.isbn" value="{{book.isbn}}"></td>
+            <td><input type="text" ng-model="book.bookName" value="{{book.bookName}}"></td>
+            <td><input type="text" ng-model="book.copies" value="{{book.copies}}"></td>
+            <td><button type="button" ng-click=edit(book._id) class="btn btn-primary">Save Edit</button></td>
+            <td><button type="button" ng-click=delete(book._id) class="btn btn-primary">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+</body>
+</html>
