@@ -43,3 +43,9 @@
 **Task 02 :** Design find restaurants app using angularjs.
 
 **Source URL :** https://github.com/chkrish9/CSEE5590_Web-Cloud-Mobile_ICP/tree/master/ICP_5
+
+## ICP - 5 :
+
+**Task 01 :** Design a book store app using the MEAN stack.
+
+**Source URL :** https://github.com/chkrish9/CSEE5590_Web-Cloud-Mobile_ICP/tree/master/ICP_6
