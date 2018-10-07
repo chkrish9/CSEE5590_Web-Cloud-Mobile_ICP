@@ -44,8 +44,14 @@
 
 **Source URL :** https://github.com/chkrish9/CSEE5590_Web-Cloud-Mobile_ICP/tree/master/ICP_5
 
-## ICP - 5 :
+## ICP - 6 :
 
 **Task 01 :** Design a book store app using the MEAN stack.
 
 **Source URL :** https://github.com/chkrish9/CSEE5590_Web-Cloud-Mobile_ICP/tree/master/ICP_6
+
+## ICP - 7 :
+
+**Task 01 :** Implement Drag, Drop, Zoomable, Collapsible Tree with auto-sizing to a tree layout using D3js.
+
+**Source URL :** https://github.com/chkrish9/CSEE5590_Web-Cloud-Mobile_ICP/tree/master/ICP_7
