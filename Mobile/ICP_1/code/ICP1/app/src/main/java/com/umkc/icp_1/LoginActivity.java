@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
             lblPasswordError.setText("Please enter password");
         }
         //Validating the username and password.
-        else if(username.equalsIgnoreCase("murali") && password.equals("Murali"))
+        else if(username.equalsIgnoreCase("admin") && password.equals("admin"))
         {
             Intent redirect = new Intent(LoginActivity.this,HomeActivity.class).putExtra("username",username);
             startActivity(redirect);
