@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="16dp"
+    tools:context=".OrderActivity">
+
+    <TextView
+        android:id="@+id/lblOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Order Summary"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/lblOrderSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Order Summary"
+        android:layout_below="@+id/lblOrder"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"/>
+
+    <RadioButton
+        android:id="@+id/rdCC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Credit Card"
+        android:layout_below="@id/lblOrderSummary"/>
+    <RadioButton
+        android:id="@+id/rdPP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rdCC"
+        android:text="Pay pal"/>
+    <Button
+        android:id="@+id/btnPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rdPP"
+        android:layout_marginTop="10dp"
+        android:text="Pay"
+        android:gravity="center_horizontal"
+        android:onClick="pay"/>
+
+</RelativeLayout>
