@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Contact</string>
+
+    <string name="add">Add</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+
+</resources>
